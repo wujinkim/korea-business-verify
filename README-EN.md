@@ -37,6 +37,10 @@ npx -y korea-business-verify   # auto DEMO mode without a key (virtual numbers, 
    ```
 3. Run: `node dist/index.js` (auto live mode when key is present)
 
+> No Korean ID? Getting an API key requires Korean identity verification.
+> A hosted version (no key required) is under consideration — register
+> your interest by opening a GitHub issue with the 'hosted-interest' label.
+
 ## Claude Desktop / Cursor
 
 `claude_desktop_config.json` (**npx recommended**):
