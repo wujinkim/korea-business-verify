@@ -1,6 +1,6 @@
 {
   "name": "korea-business-verify",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "mcpName": "io.github.wujinkim/korea-business-verify",
   "description": "한국 사업자 검증 액션 MCP 서버 — 진위확인·휴폐업·과세유형·세금계산서 발행 가능 여부 (국세청 공공데이터 기반)",
   "license": "MIT",

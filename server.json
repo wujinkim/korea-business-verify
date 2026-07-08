@@ -1,0 +1,27 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.wujinkim/korea-business-verify",
+  "description": "Korean business verification MCP server — NTS-based validity check, active/closed status, tax type, invoice eligibility. 한국 사업자 진위확인·휴폐업·과세유형·세금계산서 판정.",
+  "repository": {
+    "url": "https://github.com/wujinkim/korea-business-verify",
+    "source": "github"
+  },
+  "version": "0.1.2",
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "korea-business-verify",
+      "version": "0.1.2",
+      "transport": {
+        "type": "stdio"
+      },
+      "environmentVariables": [{
+        "name": "NTS_SERVICE_KEY",
+        "description": "data.go.kr NTS service key. Omit to run in DEMO mode (no key needed).",
+        "isRequired": false,
+        "isSecret": true,
+        "format": "string"
+      }]
+    }
+  ]
+}
