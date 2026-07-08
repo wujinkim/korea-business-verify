@@ -1,0 +1,54 @@
+{
+  "name": "korea-business-verify",
+  "version": "0.1.0",
+  "description": "한국 사업자 검증 액션 MCP 서버 — 진위확인·휴폐업·과세유형·세금계산서 발행 가능 여부 (국세청 공공데이터 기반)",
+  "license": "MIT",
+  "author": "TODO: replace with your name <email> before publish",
+  "keywords": [
+    "mcp",
+    "mcp-server",
+    "korea",
+    "korean",
+    "business",
+    "verify",
+    "nts",
+    "tax",
+    "사업자",
+    "진위확인",
+    "휴폐업"
+  ],
+  "files": [
+    "dist",
+    "README.md",
+    "README-EN.md",
+    "LICENSE"
+  ],
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "main": "dist/index.js",
+  "bin": {
+    "korea-business-verify": "dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "node --import tsx src/index.ts",
+    "test": "vitest run",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@vitest/coverage-v8": "^2.1.9",
+    "eslint": "^9.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0",
+    "typescript-eslint": "^8.0.0",
+    "vitest": "^2.1.0"
+  }
+}
