@@ -16,10 +16,10 @@ A **MCP server** for verifying Korean businesses — gives AI agents tools for b
 ## Quick Start — DEMO (no service key)
 
 ```bash
-npm install
-npm run build
-DEMO_MODE=1 node dist/index.js   # experience all 5 tools with virtual numbers
+npx -y korea-business-verify   # auto DEMO mode without a key (virtual numbers, all 5 tools)
 ```
+
+> **Build from source (developers):** `npm install && npm run build && DEMO_MODE=1 node dist/index.js`
 
 **DEMO virtual business numbers** (valid checksum, not real):
 | Number | Status | Tax type |
@@ -39,7 +39,21 @@ DEMO_MODE=1 node dist/index.js   # experience all 5 tools with virtual numbers
 
 ## Claude Desktop / Cursor
 
-`claude_desktop_config.json`:
+`claude_desktop_config.json` (**npx recommended**):
+```json
+{
+  "mcpServers": {
+    "korea-business-verify": {
+      "command": "npx",
+      "args": ["-y", "korea-business-verify"],
+      "env": { "NTS_SERVICE_KEY": "your_key" }
+    }
+  }
+}
+```
+
+<details><summary>Alternative: local build path</summary>
+
 ```json
 {
   "mcpServers": {
@@ -51,6 +65,7 @@ DEMO_MODE=1 node dist/index.js   # experience all 5 tools with virtual numbers
   }
 }
 ```
+</details>
 
 ## Privacy (no-storage principle)
 

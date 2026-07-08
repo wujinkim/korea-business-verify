@@ -16,10 +16,10 @@
 ## 빠른 시작 — DEMO (서비스키 불필요)
 
 ```bash
-npm install
-npm run build
-DEMO_MODE=1 node dist/index.js   # 가상 사업자번호로 5종 도구 체험
+npx -y korea-business-verify   # 서비스키 없으면 자동 DEMO 모드 (가상 사업자번호로 5종 도구 체험)
 ```
+
+> **소스 빌드(개발자용):** `npm install && npm run build && DEMO_MODE=1 node dist/index.js`
 
 **DEMO 가상 사업자번호** (체크섬은 유효하나 실제 존재하지 않는 번호):
 | 번호 | 상태 | 과세유형 |
@@ -39,7 +39,21 @@ DEMO_MODE=1 node dist/index.js   # 가상 사업자번호로 5종 도구 체험
 
 ## Claude Desktop / Cursor 연동
 
-`claude_desktop_config.json`:
+`claude_desktop_config.json` (**npx 권장**):
+```json
+{
+  "mcpServers": {
+    "korea-business-verify": {
+      "command": "npx",
+      "args": ["-y", "korea-business-verify"],
+      "env": { "NTS_SERVICE_KEY": "발급받은_키" }
+    }
+  }
+}
+```
+
+<details><summary>대안: 로컬 빌드 경로로 연동</summary>
+
 ```json
 {
   "mcpServers": {
@@ -51,6 +65,7 @@ DEMO_MODE=1 node dist/index.js   # 가상 사업자번호로 5종 도구 체험
   }
 }
 ```
+</details>
 
 ## 개인정보 보호 (무저장 원칙)
 
