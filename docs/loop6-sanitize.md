@@ -52,11 +52,11 @@
 ### C-8 3중 확인 (커밋 직전, 실제 명령·출력)
 - (a) `git ls-files | grep -E '\.env$|\.db$|\.log$'` → **출력 없음** ✓
 - (b) B-3 grep 재실행 → **0건** ✓
-- (c) `git log --oneline | wc -l` → <커밋 수 — 커밋 후 기록>
+- (c) `git log --oneline | wc -l` → **1** (초기 커밋, push 시점)
 
 ### C-9 repo
 - `gh repo create korea-business-verify --private --source=. --push`
-- 결과: <실행 후 기록>
+- 결과: `wujinkim/korea-business-verify`(PRIVATE) — https://github.com/wujinkim/korea-business-verify. 단일 커밋 push 완료.
 
 ---
 
